@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #1f2325;
+    --secondary-color: #738ADB;
+    --dark-color: #738ADB;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+    background-color: #738ADB;
+    border-radius: 2px;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+
+/* Showcase */
+
+.showcase {
+    height: 600px;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-form {
+    position: relative;
+    top: 50px;
+    height: auto;
+    width: 400px;
+    padding: 20px 50px;
+    z-index: 100;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase-element {
+    margin-top: 10px;
+}
+
+.showcase-text {
+    font-size: 17px;
+    text-align: justify;
+}
+
+
+/* Stats */
+
+.stats {
+    padding-top: 120px;
+}
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.stats .grid h3 {
+    font-size: 30px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.statsCards {
+    padding: 20px;
+}
+
+
+/* Slider */
+
+.slidecontainer {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .1s;
+    transition: opacity .2s;
+    border-radius: 5px;
+}
+
+.slider:hover {
+    opacity: 2;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--dark-color);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--dark-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Media Queries - (1) Tablets and under */
+
+@media(max-width: 768px) {
+    .grid,
+    .showcase .grid,
+    .stats .rid,
+    .cli .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase {
+        height: auto;
+    }
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+    .cli .grid>*:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+
+/* Media Queries - (2) Mobile */
+
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+    .navbar .flex {
+        flex-direction: column;
+    }
+    .navbar ul {
+        padding: 10px;
+    }
+    .pad {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* Results */
+
+.prediction-text {
+    color: white;
+    font-weight: bold;
+    padding: 4px 4px;
+    margin-top: 5px;
+}
+
+.prediction-text-bad {
+    background-color: var(--error-color);
+}
+
+.prediction-text-good {
+    background-color: var(--success-color);
+}
+
+.prediction-text:empty {
+    padding: 0px;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/utilities.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Diabetes Prediction | Yash Sharma</title>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div class="navbar">
+        <div class="container flex">
+            <h1 class="logo">Diabetes Prediction</h1>
+            <nav>
+                <ul>
+                    <li><a href="mailto:ys909@snu.edu.in">Email</a></li>
+                    <li><a href="https://github.com/yasharma2301" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/yash-sharma-4797a0168/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ShowCase -->
+    <section class="showcase">
+        <div class="container grid">
+            <div class="showcase-text">
+                <h1>Problem Statement</h1>
+                <p class="pad">The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from
+                    a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage.</p>
+                <a href="https://github.com/yasharma2301/Diabetes_Prediction" target="_blank" class="btn btn-dark">View On Github</a>
+            </div>
+
+            <div class="showcase-form card">
+                <h2>Try the algorithm!</h2>
+                <form class="form" id="myForm">
+                    <div class="showcase-element">
+                        <div class="griditem">
+                            <h4>Pregnancies</h4>
+                            <h4 id="pregnanciesValue">0</h4>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="5" value="0" class="slider" id="pregnancies" name="pregnancies">
+                        </div>
+                    </div>
+
+                    <div class="showcase-element">
+                        <div class="griditem">
+                            <h4>Glucose (mg/dL)</h4>
+                            <h4 id="glucoseValue">140</h4>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="80" max="240" value="140" class="slider" id="glucose" name="glucose">
+                        </div>
+                    </div>
+
+                    <div class="showcase-element">
+                        <div class="griditem">
+                            <h4>Blood Pressure (mmHg)</h4>
+                            <h4 id="blood_pressureValue">90</h4>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="50" max="120" value="90" class="slider" id="blood_pressure" name="blood_pressure">
+                        </div>
+                    </div>
+
+                    <div class="showcase-element">
+                        <div class="griditem">
+                            <h4>Skin Thickness (mm)</h4>
+                            <h4 id="skin_thicknessValue">90</h4>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="50" max="120" value="90" class="slider" id="skin_thickness" name="skin_thickness">
+                        </div>
+                    </div>
+
+                    <div class="showcase-element">
+                        <div class="griditem">
+                            <h4>Insulin (mIU/L)</h4>
+                            <h4 id="insulinValue">80</h4>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="20" max="1000" value="80" class="slider" id="insulin" name="insulin">
+                        </div>
+                    </div>
+
+                    <div class="showcase-element">
+                        <div class="griditem">
+                            <h4>BMI (kg/m2)</h4>
+                            <h4 id="bmiValue">18.5</h4>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="15" max="50" value="18.5" step="0.5" class="slider" id="bmi" name="bmi">
+                        </div>
+                    </div>
+
+                    <div class="showcase-element">
+                        <div class="griditem">
+                            <h4>Age (years)</h4>
+                            <h4 id="ageValue">25</h4>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="16" max="120" value="25" class="slider" id="age" name="age">
+                        </div>
+                    </div>
+                    <input type="submit" value="Predict" class="btn btn-primary">
+                    <h3 id="prediction-text-id" class="prediction-text">{{ fare }}</h3>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <h1 class="stats-heading text-center my-1">
+                Results and Performance Metrices
+            </h1>
+            <div class="statsCards">
+                <div class="grid">
+                    <div class="card text-center">
+                        <h3>Confusion Matrix:</h3>
+                        <img src="static/images/confustionMatrix.png" alt="">
+                        <p class="text-secondary">
+                            The F1 score for this model is 0.83 which is basically the weighted avg of precision and recall.
+                        </p>
+                    </div>
+                    <div class="card text-center">
+                        <h3>ROC Curve:</h3>
+                        <img src="static/images/roc.png" alt="">
+                        <p class="text-secondary">
+                            The ROC curve is a plot b/w sensitivity and 1-specificity values, which ensentially illustrates the diagnostic ability of a binary classifier.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-1">
+        <div class="container">
+            <div>
+                <h1>Diabetes Prediction
+                </h1>
+                <p>Copyright &copy; 2020 Yash Sharma</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="static/js/index.js"></script>
+</body>
+
+</html>
