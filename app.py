@@ -51,4 +51,4 @@ def predict():
         return "You could be having diabetes. Try consulting a doctor!" if prediction[0]==1 else "Woah! Looks like you don't have diabetes."
         
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")
