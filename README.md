@@ -19,6 +19,7 @@ In particular, all patients here are females at least 21 years old of Pima India
 | Front end | HTML+CSS |
 | Algorithm | Python |
 | Server | Flask |
+| containerization | Docker |
 
 
 # Sneak Peek
