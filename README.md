@@ -40,4 +40,7 @@ After cloning the repo you can run this command to fetch all requirements. Note 
 ```
 pip install -r requirements.txt
 ```
-
+OR use
+```
+docker pull yasharma2301/diabetes_predictions1.0:latest
+```
